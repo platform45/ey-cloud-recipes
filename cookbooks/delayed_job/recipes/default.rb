@@ -3,6 +3,10 @@
 # Recipe:: default
 #
 
+ey_cloud_report "DelayedJob" do
+  message "configuring delayed job"
+end
+
 if node[:instance_role] == "solo" || (node[:instance_role] == "util" && node[:name] !~ /^(mongodb|redis|memcache)/)
   node[:applications].each do |app_name,data|
   

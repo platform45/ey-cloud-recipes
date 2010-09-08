@@ -14,10 +14,12 @@
 # require_recipe "mbari-ruby"
 
 # uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
-# require_recipe "sphinx"
+require_recipe "sphinx"
 
 #uncomment to turn on memcached
 # require_recipe "memcached"
+
+require_recipe "delayed_job"
 
 #uncomment to run the authorized_keys recipe
 #require_recipe "authorized_keys"
@@ -35,12 +37,12 @@
 # require_recipe "sunspot"
 #
 #uncomment to run the exim recipe
-exim_auth "auth" do
-  my_hostname "my_hostname.com"
-  smtp_host "smtp.sendgrid.com"
-  username "username"
-  password "password"
-end
+# exim_auth "auth" do
+#   my_hostname "my_hostname.com"
+#   smtp_host "smtp.sendgrid.com"
+#   username "username"
+#   password "password"
+# end
 #require_recipe "exim"
 
 #uncomment to run the exim::auth recipe
