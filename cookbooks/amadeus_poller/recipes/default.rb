@@ -14,7 +14,7 @@ node[:applications].each do |app_name,data|
       group "root"
       mode 0644
       variables({
-        :app_name => "",
+        :app_name => app_name,
         :user => node[:owner_name]
       })
     end
